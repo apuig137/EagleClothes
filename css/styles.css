@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap");
+* {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+nav .img-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.tittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 200px;
+  color: #ffffff;
+  font-size: xx-large;
+  font-weight: bold;
+  background-image: url(https://img.freepik.com/foto-gratis/retrato-guapo-sonriente-elegante-hipster-lumbersexual-empresario-modelo-hombre-vestido-ropa-chaqueta-jeans_158538-1729.jpg?w=2000);
+}
+
+.tarjeta {
+  background-color: burlywood;
+  text-align: center;
+  background: var(--i);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.tarjeta .contenido {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: large;
+}
+
+.tarjeta .contenido a{
+  margin: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.tarjeta .contenido .a-index{
+  font-size: xx-large;
+}
+
+.tarjeta:hover .contenido {
+  opacity: 1;
+}
+
+.layout-index, .layout-relojes, .layout-camperas, .layout-perfumes, .layout-ropa {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(8, 250px);
+  grid-template-areas: "jeans camisas camisas" "jeans camisas camisas" "remeras remeras zapatillas" "remeras remeras zapatillas" "joggins camperas camperas" "joggins camperas camperas" "relojes relojes perfumes" "relojes relojes perfumes";
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: #212529;
+  width: 70%;
+  margin: 100px auto;
+  border: 10px solid #212529;
+}
+.layout-index .remeras, .layout-relojes .remeras, .layout-camperas .remeras, .layout-perfumes .remeras, .layout-ropa .remeras {
+  grid-area: remeras;
+}
+.layout-index .camperas, .layout-relojes .camperas, .layout-camperas .camperas, .layout-perfumes .camperas, .layout-ropa .camperas {
+  grid-area: camperas;
+}
+.layout-index .zapatillas, .layout-relojes .zapatillas, .layout-camperas .zapatillas, .layout-perfumes .zapatillas, .layout-ropa .zapatillas {
+  grid-area: zapatillas;
+}
+.layout-index .joggins, .layout-relojes .joggins, .layout-camperas .joggins, .layout-perfumes .joggins, .layout-ropa .joggins {
+  grid-area: joggins;
+}
+.layout-index .jeans, .layout-relojes .jeans, .layout-camperas .jeans, .layout-perfumes .jeans, .layout-ropa .jeans {
+  grid-area: jeans;
+}
+.layout-index .camisas, .layout-relojes .camisas, .layout-camperas .camisas, .layout-perfumes .camisas, .layout-ropa .camisas {
+  grid-area: camisas;
+}
+.layout-index .relojes, .layout-relojes .relojes, .layout-camperas .relojes, .layout-perfumes .relojes, .layout-ropa .relojes {
+  grid-area: relojes;
+}
+.layout-index .perfumes, .layout-relojes .perfumes, .layout-camperas .perfumes, .layout-perfumes .perfumes, .layout-ropa .perfumes {
+  grid-area: perfumes;
+}
+
+.dinamico {
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dinamico .dinamico-div {
+  background-color: #ffffff;
+  border: #000000 solid;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);
+  margin: 10px;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dinamico .dinamico-div .form-content {
+  padding: 5px;
+  text-align: center;
+}
+.dinamico .dinamico-div .form-content input {
+  margin: 3px;
+  width: 500px;
+}
+.dinamico .dinamico-div .form-content .opinion {
+  height: 300px;
+}
+
+footer {
+  background-color: #212529;
+  color: #ffffff;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .redes {
+  margin-top: 25px;
+}
+footer .redes .red {
+  margin: 0 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .layout-index, .layout-relojes, .layout-camperas, .layout-perfumes, .layout-ropa {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 250px);
+    grid-template-areas: "jeans" "camisas" "remeras" "zapatillas" "joggins" "camperas" "relojes" "perfumes";
+    width: 90%;
+    margin: 30px auto;
+  }
+  .tittle {
+    padding: 100px;
+  }
+  .dinamico .dinamico-div {
+    width: 90%;
+    margin: 5% auto;
+  }
+  .dinamico .dinamico-div .form-content input {
+    width: 300px;
+  }
+}
+@media (max-width: 350px) {
+  .dinamico .dinamico-div iframe {
+    width: 100%;
+  }
+  .dinamico .dinamico-div .form-content input {
+    width: 200px;
+  }
+}
+.layout-acerca {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.layout-acerca .logo-acerca {
+  width: 200px;
+  height: 200px;
+}
+.layout-acerca .acerca-content {
+  margin: 40px 0;
+  padding: 0 20%;
+  border: solid #212529 2px;
+  border-radius: 5px;
+}
+.layout-acerca .acerca-content:hover {
+  background-color: #212529;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+  .layout-acerca {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .layout-acerca .logo-acerca {
+    width: 100px;
+    height: 100px;
+  }
+  .layout-acerca .acerca-content {
+    margin: 30px 0;
+    padding: 0 5%;
+  }
+}
+@media (max-width: 768px) {
+  .acerca-content {
+    padding: 0 10%;
+  }
+}
+@media (max-width: 992px) {
+  .acerca-content {
+    padding: 0 15%;
+  }
+}
+.layout-ropa {
+  grid-template-rows: repeat(3, 450px);
+  grid-template-areas: "tarjeta1 tarjeta2 tarjeta3" "tarjeta4 tarjeta5 tarjeta6" "tarjeta7 tarjeta8 tarjeta9";
+}
+.layout-ropa .tarjeta1 {
+  grid-area: tarjeta1;
+}
+.layout-ropa .tarjeta2 {
+  grid-area: tarjeta2;
+}
+.layout-ropa .tarjeta3 {
+  grid-area: tarjeta3;
+}
+.layout-ropa .tarjeta4 {
+  grid-area: tarjeta4;
+}
+.layout-ropa .tarjeta5 {
+  grid-area: tarjeta5;
+}
+.layout-ropa .tarjeta6 {
+  grid-area: tarjeta6;
+}
+.layout-ropa .tarjeta7 {
+  grid-area: tarjeta7;
+}
+.layout-ropa .tarjeta8 {
+  grid-area: tarjeta8;
+}
+.layout-ropa .tarjeta9 {
+  grid-area: tarjeta9;
+}
+
+@media (max-width: 768px) {
+  .layout-ropa {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(9, 350px);
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3" "tarjeta4" "tarjeta5" "tarjeta6" "tarjeta7" "tarjeta8" "tarjeta9";
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+.layout-perfumes {
+  grid-template-rows: repeat(3, 250px);
+  grid-template-areas: "tarjeta1 tarjeta2 tarjeta3" "tarjeta4 tarjeta5 tarjeta6" "tarjeta7 tarjeta8 tarjeta9";
+}
+.layout-perfumes .tarjeta1 {
+  grid-area: tarjeta1;
+}
+.layout-perfumes .tarjeta2 {
+  grid-area: tarjeta2;
+}
+.layout-perfumes .tarjeta3 {
+  grid-area: tarjeta3;
+}
+.layout-perfumes .tarjeta4 {
+  grid-area: tarjeta4;
+}
+.layout-perfumes .tarjeta5 {
+  grid-area: tarjeta5;
+}
+.layout-perfumes .tarjeta6 {
+  grid-area: tarjeta6;
+}
+.layout-perfumes .tarjeta7 {
+  grid-area: tarjeta7;
+}
+.layout-perfumes .tarjeta8 {
+  grid-area: tarjeta8;
+}
+.layout-perfumes .tarjeta9 {
+  grid-area: tarjeta9;
+}
+
+@media (max-width: 768px) {
+  .layout-perfumes {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 250px);
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3" "tarjeta4" "tarjeta5" "tarjeta6" "tarjeta7" "tarjeta8" "tarjeta9";
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+.layout-camperas {
+  grid-template-rows: repeat(3, 500px);
+  grid-template-areas: "tarjeta1 tarjeta2 tarjeta3" "tarjeta4 tarjeta5 tarjeta6" "tarjeta7 tarjeta8 tarjeta9";
+}
+.layout-camperas .tarjeta1 {
+  grid-area: tarjeta1;
+}
+.layout-camperas .tarjeta2 {
+  grid-area: tarjeta2;
+}
+.layout-camperas .tarjeta3 {
+  grid-area: tarjeta3;
+}
+.layout-camperas .tarjeta4 {
+  grid-area: tarjeta4;
+}
+.layout-camperas .tarjeta5 {
+  grid-area: tarjeta5;
+}
+.layout-camperas .tarjeta6 {
+  grid-area: tarjeta6;
+}
+.layout-camperas .tarjeta7 {
+  grid-area: tarjeta7;
+}
+.layout-camperas .tarjeta8 {
+  grid-area: tarjeta8;
+}
+.layout-camperas .tarjeta9 {
+  grid-area: tarjeta9;
+}
+
+@media (max-width: 768px) {
+  .layout-camperas {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 400px);
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3" "tarjeta4" "tarjeta5" "tarjeta6" "tarjeta7" "tarjeta8" "tarjeta9";
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+.layout-relojes {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, 400px);
+  grid-template-areas: "tarjeta1 tarjeta2" "tarjeta3 tarjeta4" "tarjeta5 tarjeta6" "tarjeta7 tarjeta8";
+}
+.layout-relojes .tarjeta1 {
+  grid-area: tarjeta1;
+}
+.layout-relojes .tarjeta2 {
+  grid-area: tarjeta2;
+}
+.layout-relojes .tarjeta3 {
+  grid-area: tarjeta3;
+}
+.layout-relojes .tarjeta4 {
+  grid-area: tarjeta4;
+}
+.layout-relojes .tarjeta5 {
+  grid-area: tarjeta5;
+}
+.layout-relojes .tarjeta6 {
+  grid-area: tarjeta6;
+}
+.layout-relojes .tarjeta7 {
+  grid-area: tarjeta7;
+}
+.layout-relojes .tarjeta8 {
+  grid-area: tarjeta8;
+}
+
+@media (max-width: 678px) {
+  .layout-relojes {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 400px);
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3" "tarjeta4" "tarjeta5" "tarjeta6" "tarjeta7" "tarjeta8";
+    width: 90%;
+    margin: 30px auto;
+  }
+}
