@@ -71,54 +71,76 @@ let productos = [
     {id:70, prenda: "zapatilla", precio: 13000, img: "../img/zapatillas/8.webp", tarjeta: "tarjeta8"},
 ]
 
-let layouts = [
-    layoutCamisas = document.getElementById("layout-camisas"),
-    layoutCamperas = document.getElementById("layout-camperas"),
-    layoutJeans = document.getElementById("layout-jeans"),
-    layoutJoggins = document.getElementById("layout-joggins"),
-    layoutPerfumes = document.getElementById("layout-perfumes"),
-    layoutRelojes = document.getElementById("layout-relojes"),
-    layoutRemeras = document.getElementById("layout-remeras"),
-    layoutZapatillas = document.getElementById("layout-zapatillas"),
-]
+let layoutCamisas = document.getElementById("layout-camisas")
+let layoutZapatillas = document.getElementById("layout-zapatillas")
+let layoutRemeras = document.getElementById("layout-remeras")
 
 
 
 
-//function verCamisas(){
-//    productos.forEach((camisa) => {
-//        if (camisa.prenda == "camisa") {
-//            let contenido = document.createElement("div")
-//            contenido.innerHTML = `
-//            <div class="tarjeta ${camisa.tarjeta}" style="--i:url(${camisa.img})">
-//                <div class="contenido">
-//                    <a>$${camisa.precio}</a>
-//                    <a href="#">AGREGAR AL CARRITO</a>
-//                </div>
-//            </div>
-//            `
-//            
-//        }
-//    });
-//}
-//
-//verCamisas()
-
-function verProducto(){
+function verZapatillas(){
     productos.forEach((producto) => {
-        let str = producto.prenda
-        let str2 = str.charAt(0).toUpperCase() + str.slice(1);
-        let strFinal = "layout" + str2
-        let contenido = `
-        <div class="tarjeta ${producto.tarjeta}" style="--i:url(${producto.img})">
+        if (producto.prenda == "zapatilla") {
+                let contenido = document.createElement("div")
+                contenido.innerHTML = `
+                <div class="tarjeta ${producto.tarjeta}" style="--i:url(${producto.img})">
+                    <div class="contenido">
+                        <a>$${producto.precio}</a>
+                        <a href="#">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                `
+                layoutZapatillas.appendChild(contenido)
+        } else if (producto.prenda == "remera") {
+            let contenido = document.createElement("div")
+            contenido.innerHTML = `
+            <div class="tarjeta ${producto.tarjeta}" style="--i:url(${producto.img})">
                 <div class="contenido">
                     <a>$${producto.precio}</a>
                     <a href="#">AGREGAR AL CARRITO</a>
                 </div>
             </div>
-        `
-        strFinal.appendChild(layout+strFinal)
-    })
-}
+            `
+            layoutRemeras.appendChild(contenido)
+        }
+        });
+    }
+    
+verZapatillas()
 
-verProducto()
+//function verProducto(){
+//    productos.forEach((producto) => {
+//        if (producto.prenda == "camisa") {
+//            let contenido = `
+//                <div class="tarjeta ${producto.tarjeta}" style="--i:url(${producto.img})">
+//                    <div class="contenido">
+//                        <a>$${producto.precio}</a>
+//                        <a href="#">AGREGAR AL CARRITO</a>
+//                    </div>
+//                </div>
+//            `
+//            layoutCamisas.appendChild(contenido)
+//        }
+
+      //
+      //    
+      //} else if (producto.prenda == "campera") {
+      //    layoutCamperas.appendChild(contenido)
+      //}
+        
+        
+       //let prenda = producto.prenda
+       //switch (prenda) {
+       //    case "camisa":
+       //        layoutCamisas.appendChild(contenido)
+       //    case "campera":
+       //        layoutCamperas.appendChild(contenido)
+       //    default:
+       //        break;
+       //}
+        
+        
+//    })
+//}
+
+//verProducto()

@@ -379,3 +379,50 @@ footer .redes .red {
     margin: 30px auto;
   }
 }
+
+nav .carrito {
+  color: #7e8081;
+  margin: 0 1%;
+}
+
+nav .carrito:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  #nav-marca {
+    display: none;
+  }
+  #carrito2 {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #carrito1 {
+    display: none;
+  }
+}
+
+.carrito-div{
+  display: none;
+}
+
+.carrito-div-active{
+  display: flex;
+  align-items: center;
+  border:  10px solid #212529;
+  width: 70%;
+  margin: 0px auto;
+  margin-top: 80px;
+  padding: 30px;
+}
+
+.agregar-carrito{
+  text-decoration: none;
+}
+
+.width{
+  width: 100%;
+}
+
