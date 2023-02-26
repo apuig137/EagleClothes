@@ -426,3 +426,6 @@ nav .carrito:hover {
   width: 100%;
 }
 
+.display-none{
+  display: none;
+}

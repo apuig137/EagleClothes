@@ -16,7 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
@@ -28,25 +27,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#" id="inicio-btn">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Stock
-                        </a>
+                        <a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stock</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./pages/jeans.html">Jeans</a></li>
-                            <li><a class="dropdown-item" href="./pages/camisas.html">Camisas</a></li>
-                            <li><a class="dropdown-item" href="./pages/remeras.html">Remeras</a></li>
-                            <li><a class="dropdown-item" href="./pages/zapatillas.html">Zapatillas</a></li>
-                            <li><a class="dropdown-item" href="./pages/joggins.html">Joggins</a></li>
-                            <li><a class="dropdown-item" href="./pages/camperas.html">Camperas</a></li>
-                            <li><a class="dropdown-item" href="./pages/relojes.html">Relojes</a></li>
-                            <li><a class="dropdown-item" href="./pages/perfumes.html">Perfumes</a></li>
+                            <li><a class="dropdown-item jeans-btn" href="#">Jeans</a></li>
+                            <li><a class="dropdown-item camisas-btn" href="#">Camisas</a></li>
+                            <li><a class="dropdown-item remeras-btn" href="#">Remeras</a></li>
+                            <li><a class="dropdown-item zapatillas-btn" href="#">Zapatillas</a></li>
+                            <li><a class="dropdown-item joggins-btn" href="#">Joggins</a></li>
+                            <li><a class="dropdown-item camperas-btn" href="#">Camperas</a></li>
+                            <li><a class="dropdown-item relojes-btn" href="#">Relojes</a></li>
+                            <li><a class="dropdown-item perfumes-btn" href="#">Perfumes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./pages/acerca.html">Quienes somos</a>
+                        <a class="nav-link active" href="#" id="acerca-btn">Quienes somos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#form">Contacto</a>
@@ -56,67 +53,87 @@
             <a href="#" class="carrito" id="carrito2"><i class="fa-solid fa-cart-shopping fa-2xl red"></i></a>
         </div>
     </nav>
+    
+    <div class="tittle layout-img" style="--i:url()">
+        EAGLE CLOTHES
+    </div>
 
-    <main>
-        <div class="tittle" style="--i:url()">
-            EAGLE CLOTHES
+    <div class="carrito-div">
+        <div class="row">
+            <!-- Carrito -->
+            <aside class="width">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito-ul" class="list-group"><i class="fa-regular fa-cart-shopping"></i></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: $<span id="total">0</span>.00</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
         </div>
+    </div>
 
-        <div class="carrito-div">
-            <div class="row">
-                <!-- Carrito -->
-                <aside class="width">
-                    <h2>Carrito</h2>
-                    <!-- Elementos del carrito -->
-                    <ul id="carrito-ul" class="list-group"><i class="fa-regular fa-cart-shopping"></i></ul>
-                    <hr>
-                    <!-- Precio total -->
-                    <p class="text-right">Total: $<span id="total">0</span>.00</p>
-                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                </aside>
-            </div>
-        </div>
+    <div class="display-none layout-ropa">
+
+    </div>
+    <div class="display-none layout-perfumes">
+
+    </div>
+    <div class="display-none layout-relojes">
+        
+    </div>
 
     <div class="layout-index">
         <div id="remeras" class="tarjeta remeras" style="--i:url(https://img.freepik.com/fotos-premium/maqueta-camiseta-blanca-chico-joven-telon-fondo-pared-colorida-al-aire-libre-vista-frontal-diseno-moda-lugar-patern-plantilla-presentacion-tienda-hombre-jeans_300849-1576.jpg?w=2000)">
             <div class="contenido">
-                <a class="a-index" href="./pages/remeras.html">REMERAS</a>
+                <a id="remeras-btn" class="a-index remeras-btn" href="#">REMERAS</a>
             </div>
         </div>
         <div id="camperas" class="tarjeta camperas" style="--i:url(https://fotos.perfil.com/2020/07/17/1707camperas-988252.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/camperas.html">CAMPERAS</a>
+                <a id="camperas-btn" class="a-index camperas-btn" href="#">CAMPERAS</a>
             </div>
         </div>
         <div id="zapatillas" class="tarjeta zapatillas" style="--i:url(https://capital.es/wp-content/uploads/2021/11/pexels-karolina-grabowska-8092975.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/zapatillas.html">ZAPATILLAS</a>  
+                <a id="zapatillas-btn" class="a-index zapatillas-btn" href="#">ZAPATILLAS</a>  
             </div>
         </div>
         <div id="joggins" class="tarjeta joggins" style="--i:url(https://cf.shopee.cl/file/47b043822b44ad1001a99e30c1a152c0)">
             <div class="contenido">
-                <a class="a-index" href="./pages/joggins.html">JOGGINS</a>
+                <a id="joggins-btn" class="a-index joggins-btn" href="#">JOGGINS</a>
             </div>
         </div>
         <div id="jeans" class="tarjeta jeans" style="--i:url(http://d3ugyf2ht6aenh.cloudfront.net/stores/001/343/531/products/041173o4-e756d38e27f0ab161616154015230894-640-0.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/jeans.html">JEANS</a>
+                <a id="jeans-btn" class="a-index jeans-btn" href="#">JEANS</a>
             </div>
         </div>
         <div id="camisas" class="tarjeta camisas" style="--i:url(https://media.gq.com.mx/photos/6266d80aa6124b05cd9e65e3/16:9/w_2560%2Cc_limit/los-diferentes-tipos-de-camisas.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/camisas.html">CAMISAS</a>
+                <a id="camisas-btn" class="a-index camisas-btn" href="#">CAMISAS</a>
             </div>
         </div>
         <div id="relojes" class="tarjeta relojes" style="--i:url(https://pbs.twimg.com/media/FAdQE3TX0AYLcT0.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/relojes.html">RELOJES</a>
-            </div>
+                <a id="relojes-btn" class="a-index relojes-btn" href="#">RELOJES</a>
+            </div> 
         </div>
         <div id="perfumes" class="tarjeta perfumes" style="--i:url(https://media.gq.com.mx/photos/5e01963e0e681900084becb5/master/pass/GettyImages-544177635.jpg)">
             <div class="contenido">
-                <a class="a-index" href="./pages/perfumes.html">PERFUMES</a>
+                <a id="perfumes-btn" class="a-index perfumes-btn" href="#">PERFUMES</a>
             </div>
+        </div>
+    </div>
+
+    <div class="layout-acerca display-none">
+        <div>
+            <img class="logo-acerca" src="../img/logo.png" alt="Eagle Clothes">
+        </div>
+        <div class="acerca-content text-center">
+            <h1>EAGLE CLOTHES</h1>
+            <p>Eagle Clothes es un empresa que representa los valores del aguila, su dureza y capacidad para adaptarse a las adversidades, nuestra ropa es el arte mediante el cual nos expresamos.</p>
+            <p>Nos dedicamos a tu comodidad, combinando buenos precios con buena calidad, haciendo tu dia a dia mejor y mas flexible. Nos ubicamos en Alto Palermo y proximamente podriamos estar en tu ciudad, no te duermas!</p>
         </div>
     </div>
 
@@ -153,6 +170,7 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="./javascript/index-acerca.js"></script>
+    <script src="./javascript/ropa.js"></script>
+
 </body>
 </html>
